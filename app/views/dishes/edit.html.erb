@@ -1,0 +1,11 @@
+<h1>This is the page to EDIT a dish</h1>
+
+<%= simple_form_for(@dish) do |f| %>
+   <%= f.input :name,  label: "Name of Dish" %>
+  <%= f.input :description, label: "Description of Dish" %>
+  <%#= f.input :photo, as: :file, label: "Upload a Photo", input_html: { class: 'hidden'} %>
+  <%#= f.input :photo, input_html: { class: 'd-none' }, label_html: { class: 'my-3 btn upload-photo'}, label: 'Upload a Photo' %>
+
+  <%#= f.input :photo, as: :file, label: "Upload a Photo" %>
+  <%= f.button :submit, class: 'btn btn-primary' %>   
+<% end %>
