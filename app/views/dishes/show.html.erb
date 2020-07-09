@@ -1,0 +1,10 @@
+<h1>this is the show page...</h1>
+
+<%= image_tag @dish.photo, alt: "alttext" %>
+<%= @dish.name %>
+<br>
+<%= @dish.description %>
+<br>
+<%= link_to "home", root_path, class: "btn btn-primary" %>
+<br>
+<%= link_to "edit", edit_dish_url, class: "btn btn-warning" %>
