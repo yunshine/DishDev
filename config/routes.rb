@@ -3,9 +3,7 @@ Rails.application.routes.draw do
   root to: "dishes#index"
 
   resources :dishes, only: [:index, :show, :new, :create, :edit, :destroy] do
-    resources :addition, only: [:new, :create, :edit] do
-      resources :ingredients, only: [:new, :create]
-    end
+    resources :addition, only: [:create, :edit]
   end
   # resources :search, only: [:index]
   resources :additions, only: [:destroy]
