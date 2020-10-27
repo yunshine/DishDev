@@ -1,124 +1,13 @@
-const Recipe = require('../models/recipe-model')
+const express = require('express')
 
-createRecipe = (req, res) => {
-  const body = req.body
+const RecipeCtrl = require('../controllers/recipe-ctrl')
 
-  if (!body) {
-    return res.status(400).json({
-      success: false,
-      error: 'You must provide a recipe',
-    })
-  }
+const router = express.Router()
 
-  const recipe = new Recipe(body)
+router.post('/recipe', RecipeCtrl.createRecipe)
+router.put('/recipe/:id', RecipeCtrl.updateRecipe)
+router.delete('/recipe/:id', RecipeCtrl.deleteRecipe)
+router.get('/recipe/:id', RecipeCtrl.getRecipeById)
+router.get('/recipes', RecipeCtrl.getRecipes)
 
-  if (!recipe) {
-    return res.status(400).json({ success: false, error: err })
-  }
-
-  recipe
-    .save()
-    .then(() => {
-      return res.status(201).json({
-        success: true,
-        id: recipe._id,
-        message: 'Recipe created!',
-      })
-    })
-    .catch(error => {
-      return res.status(400).json({
-        error,
-        message: 'Recipe not created!',
-      })
-    })
-}
-
-updateRecipe = async (req, res) => {
-  const body = req.body
-
-  if (!body) {
-    return res.status(400).json({
-      success: false,
-      error: 'You must provide a body to update',
-    })
-  }
-
-  Recipe.findOne({ _id: req.params.id }, (err, recipe) => {
-    if (err) {
-      return res.status(404).json({
-        err,
-        message: 'Recipe not found!',
-      })
-    }
-    recipe.name = body.name
-    recipe.ingredients = body.ingredients
-    recipe
-      .save()
-      .then(() => {
-        return res.status(200).json({
-          success: true,
-          id: recipe._id,
-          message: 'Recipe updated!',
-        })
-      })
-      .catch(error => {
-        return res.status(404).json({
-          error,
-          message: 'Recipe not updated!',
-        })
-      })
-  })
-}
-
-deleteRecipe = async (req, res) => {
-  await Recipe.findOneAndDelete({ _id: req.params.id }, (err, recipe) => {
-    if (err) {
-      return res.status(400).json({ success: false, error: err })
-    }
-
-    if (!recipe) {
-      return res
-        .status(404)
-        .json({ success: false, error: `Recipe not found` })
-    }
-
-    return res.status(200).json({ success: true, data: recipe })
-  }).catch(err => console.log(err))
-}
-
-getRecipeById = async (req, res) => {
-  await Recipe.findOne({ _id: req.params.id }, (err, recipe) => {
-    if (err) {
-      return res.status(400).json({ success: false, error: err })
-    }
-
-    if (!mecipe) {
-      return res
-        .status(404)
-        .json({ success: false, error: `Recipe not found` })
-    }
-    return res.status(200).json({ success: true, data: recipe })
-  }).catch(err => console.log(err))
-}
-
-getRecipe = async (req, res) => {
-  await Recipe.find({}, (err, recipes) => {
-    if (err) {
-      return res.status(400).json({ success: false, error: err })
-    }
-    if (!recipes.length) {
-      return res
-        .status(404)
-        .json({ success: false, error: `Recipe not found` })
-    }
-    return res.status(200).json({ success: true, data: recipes })
-  }).catch(err => console.log(err))
-}
-
-module.exports = {
-  createRecipe,
-  updateRecipe,
-  deleteRecipe,
-  getRecipes,
-  getRecipeById,
-}
+module.exports = router
