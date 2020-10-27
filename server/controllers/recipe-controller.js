@@ -101,7 +101,7 @@ getRecipeById = async (req, res) => {
   }).catch(err => console.log(err))
 }
 
-getRecipe = async (req, res) => {
+getRecipes = async (req, res) => {
   await Recipe.find({}, (err, recipes) => {
     if (err) {
       return res.status(400).json({ success: false, error: err })

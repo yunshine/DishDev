@@ -1,6 +1,6 @@
 const express = require('express')
 
-const RecipeCtrl = require('../controllers/recipe-ctrl')
+const RecipeCtrl = require('../controllers/recipe-controller')
 
 const router = express.Router()
 

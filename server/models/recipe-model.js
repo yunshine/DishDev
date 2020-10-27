@@ -10,4 +10,4 @@ const Recipe = new Schema(
   { timestamps: true },
 )
 
-module.exports = mongoose.model('movies', Movie)
+module.exports = mongoose.model('recipes', Recipe)
