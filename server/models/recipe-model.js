@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
+// should be recipeSchema...
 const Recipe = new Schema(
   {
     name: { type: String, required: true },
@@ -19,4 +20,5 @@ const Recipe = new Schema(
   { timestamps: true },
 )
 
+// 'recipes' should be uppercase and singular, and Recipe should be recipeSchema...
 module.exports = mongoose.model('recipes', Recipe)
