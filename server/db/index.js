@@ -1,12 +1,14 @@
+const mongoose = require('mongoose');
 
-const mongoose = require('mongoose')
+mongoose.connect('mongodb://127.0.0.1:27017/instant_pot_recipes', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+})
+    .then(() => console.log('Connected to database!'))
+    .catch(error => console.error('Connection error', error.message));
 
-mongoose
-    .connect('mongodb://127.0.0.1:27017/instant_pot_recipe', { useNewUrlParser: true })
-    .catch(e => {
-        console.error('Connection error', e.message)
-    })
+const db = mongoose.connection;
 
-const db = mongoose.connection
-
-module.exports = db
+module.exports = db;
