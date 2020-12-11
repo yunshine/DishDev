@@ -1,13 +1,13 @@
-const express = require('express')
+const express = require('express');
 
-const RecipeCtrl = require('../controllers/recipes-controller')
+const recipesController = require('../controllers/recipes-controller');
 
-const router = express.Router()
+const router = express.Router();
 
-router.post('/recipe', RecipeCtrl.createRecipe)
-router.put('/recipe/:id', RecipeCtrl.updateRecipe)
-router.delete('/recipe/:id', RecipeCtrl.deleteRecipe)
-router.get('/recipe/:id', RecipeCtrl.getRecipeById)
-router.get('/recipes', RecipeCtrl.getRecipes)
+router.post('/recipes', recipesController.createRecipe);
+router.put('/recipes/:id', recipesController.updateRecipe);
+router.delete('/recipes/:id', recipesController.deleteRecipe);
+router.get('/recipes/:id', recipesController.getRecipeById);
+router.get('/recipes', recipesController.getRecipes);
 
-module.exports = router
+module.exports = router;
