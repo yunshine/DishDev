@@ -1,3 +1,20 @@
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+import { NavBar } from '../components';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+function App() {
+    return (
+        <Router>
+            <NavBar />
+        </Router>
+    );
+};
+
+export default App;
+
 // import logo from './logo.svg';
 // import './App.css';
 
@@ -50,20 +67,3 @@
 // }
 
 // export default App;
-
-import React from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
-
-import { NavBar } from '../components'
-
-import 'bootstrap/dist/css/bootstrap.min.css'
-
-function App() {
-    return (
-        <Router>
-            <NavBar />
-        </Router>
-    )
-}
-
-export default App
