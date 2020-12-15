@@ -10,4 +10,4 @@ class RecipesInsert extends Component {
     };
 };
 
-export default MoviesInsert;
+export default RecipesInsert;
