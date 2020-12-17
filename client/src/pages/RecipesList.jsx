@@ -69,22 +69,26 @@ class RecipesList extends Component {
 
         let testText = <p>testText...</p>;
         if (recipes.length) {
-            testText = <p>Great! Some recipes exist...</p>;
+            testText = <h4>Great! Some recipes exist...</h4>;
         } else {
             testText = <h4>!!!Oh NO!!! ERROR!!! There are no recipes!!!</h4>;
         };
 
         return (
             <div>
-                <p>In this page you'll see the list of recipes</p>
+                <br />
+                <h3>In this page you'll see the list of recipes</h3>
                 {testText}
+                <br />
+                <hr />
                 {recipes.map(recipe => (
                     <>
-                        <p>{recipe.name}</p>
+                        <h3>{recipe.name}</h3>
                         <p>{recipe.images}</p>
                         <p>{recipe.ingredients}</p>
                         <p>{recipe.directions}</p>
                         <DeleteRecipe id={recipe._id} />
+                        <UpdateRecipe id={recipe._id} />
                         <br></br>
                         <hr></hr>
                     </>
