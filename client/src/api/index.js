@@ -4,14 +4,14 @@ const api = axios.create({
     baseURL: 'http://localhost:3000/api',
 });
 
-export const insertRecipe = payload => api.post(`/recipes/create`, payload);
 export const getAllRecipes = () => api.get(`/recipes/list`);
+export const createRecipe = payload => api.post(`/recipes/create`, payload);
+export const getRecipeById = id => api.get(`/recipes/${id}`);
 export const updateRecipeById = (id, payload) => api.put(`/recipes/${id}`, payload);
 export const deleteRecipeById = id => api.delete(`/recipes/${id}`);
-export const getRecipeById = id => api.get(`/recipes/${id}`);
 
 const apis = {
-    insertRecipe,
+    createRecipe,
     getAllRecipes,
     updateRecipeById,
     deleteRecipeById,

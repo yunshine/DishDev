@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class RecipesInsert extends Component {
+class RecipesCreate extends Component {
     render() {
         return (
             <div>
@@ -10,4 +10,4 @@ class RecipesInsert extends Component {
     };
 };
 
-export default RecipesInsert;
+export default RecipesCreate;

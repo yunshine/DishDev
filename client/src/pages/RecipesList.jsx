@@ -1,7 +1,45 @@
 import React, { Component } from 'react';
 import api from '../api';
-
 import styled from 'styled-components';
+
+const Update = styled.div`
+    color: #ef9b0f;
+    cursor: pointer;
+`
+
+const Delete = styled.div`
+    color: #ff0000;
+    cursor: pointer;
+`
+
+class UpdateRecipe extends Component {
+    updateRecipe = event => {
+        event.preventDefault();
+        window.location.href = `/recipes/update/${this.props.id}`;
+    };
+
+    render() {
+        return <Update onClick={this.updateRecipe}>Update Recipe</Update>
+    };
+};
+
+class DeleteRecipe extends Component {
+    deleteRecipe = event => {
+        event.preventDefault();
+        if (
+            window.confirm(
+                `Are you sure you want to delete ${this.props.name}?`,
+            )
+        ) {
+            api.deleteRecipeById(this.props.id);
+            window.location.reload();
+        }
+    };
+
+    render() {
+        return <Delete onClick={this.deleteRecipe}>Delete</Delete>
+    };
+};
 
 class RecipesList extends Component {
     constructor(props) {
@@ -46,6 +84,9 @@ class RecipesList extends Component {
                         <p>{recipe.images}</p>
                         <p>{recipe.ingredients}</p>
                         <p>{recipe.directions}</p>
+                        <DeleteRecipe id={recipe._id} />
+                        <br></br>
+                        <hr></hr>
                     </>
                 ))}
             </div>

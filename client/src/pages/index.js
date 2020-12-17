@@ -1,5 +1,5 @@
 import RecipesList from './RecipesList';
-import RecipesInsert from './RecipesInsert';
+import RecipesCreate from './RecipesCreate';
 import RecipesUpdate from './RecipesUpdate';
 
-export { RecipesList, RecipesInsert, RecipesUpdate };
+export { RecipesList, RecipesCreate, RecipesUpdate };
