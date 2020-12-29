@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import api from '../api';
 import styled from 'styled-components';
+import { withStyles } from '@material-ui/styles';
+import styles from '../styles/RecipesListStyles';
 
 const Update = styled.div`
     color: #ef9b0f;
@@ -98,4 +100,4 @@ class RecipesList extends Component {
     };
 };
 
-export default RecipesList;
+export default withStyles(styles)(RecipesList);
