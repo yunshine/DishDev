@@ -67,7 +67,7 @@ class RecipesList extends Component {
         };
 
         return (
-            <div>
+            <div className={this.props.classes.RecipesList}>
                 <br />
                 <h3>In this page you'll see the list of recipes</h3>
                 {testText}

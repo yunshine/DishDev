@@ -1,6 +1,19 @@
 import sizes from './MediaSizes';
 
 export default {
+    RecipesList: {
+        width: '960px',
+        margin: 'auto',
+        [sizes.down('md')]: {
+            width: '720px',
+        },
+        [sizes.down('sm')]: {
+            width: '540px',
+        },
+        [sizes.down('xs')]: {
+            width: '100%',
+        },
+    },
     image: {
         width: '320px',
     },
