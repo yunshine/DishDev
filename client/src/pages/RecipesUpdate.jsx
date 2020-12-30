@@ -43,6 +43,7 @@ class RecipesUpdate extends Component {
             id: this.props.match.params.id,
             name: '',
             images: '',
+            description: '',
             ingredients: '',
             directions: '',
         };
@@ -58,6 +59,11 @@ class RecipesUpdate extends Component {
         this.setState({ images });
     };
 
+    handleChangeInputDescription = async event => {
+        const description = event.target.value;
+        this.setState({ description });
+    };
+
     handleChangeInputIngredients = async event => {
         const ingredients = event.target.value;
         this.setState({ ingredients });
@@ -69,8 +75,8 @@ class RecipesUpdate extends Component {
     };
 
     handleUpdateRecipe = async () => {
-        const { id, name, images, ingredients, directions } = this.state
-        const payload = { name, images, ingredients, directions };
+        const { id, name, images, description, ingredients, directions } = this.state
+        const payload = { name, images, description, ingredients, directions };
 
         await api.updateRecipeById(id, payload).then(res => {
             window.alert(`Recipe successfuly updated`);
@@ -85,13 +91,14 @@ class RecipesUpdate extends Component {
         this.setState({
             name: recipe.data.data.name,
             images: recipe.data.data.images,
+            description: recipe.data.data.description,
             ingredients: recipe.data.data.ingredients,
             directions: recipe.data.data.directions,
         })
     }
 
     render() {
-        const { name, images, ingredients, directions } = this.state;
+        const { name, images, description, ingredients, directions } = this.state;
         return (
             <Wrapper>
                 <Title>Create Recipe</Title>
@@ -107,6 +114,12 @@ class RecipesUpdate extends Component {
                     type="text"
                     value={images}
                     onChange={this.handleChangeInputImages}
+                />
+                <Label>Description: </Label>
+                <InputText
+                    type="text"
+                    value={description}
+                    onChange={this.handleChangeInputDescription}
                 />
                 <Label>Ingredients: </Label>
                 <InputText

@@ -77,6 +77,7 @@ class RecipesList extends Component {
                     <>
                         <h3>{recipe.name}</h3>
                         <img src={recipe.images} className={this.props.classes.image} />
+                        <p>{recipe.description}</p>
                         <p>{recipe.ingredients}</p>
                         <p>{recipe.directions}</p>
                         <DeleteRecipe id={recipe._id} name={recipe.name} className={this.props.classes.IndexDeleteRecipeButton} />
