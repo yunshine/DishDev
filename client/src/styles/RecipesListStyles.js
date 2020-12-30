@@ -49,6 +49,9 @@ export default {
 
     RecipesListCardImage: {
         width: '440px',
+        height: '320px',
+        objectFit: 'cover',
+        padding: '0px',
         [sizes.down('lg')]: {
             width: '400px',
         },
