@@ -74,11 +74,7 @@ class RecipesUpdate extends Component {
 
         await api.updateRecipeById(id, payload).then(res => {
             window.alert(`Recipe successfuly updated`);
-            this.setState({
-                name: '',
-                rating: '',
-                time: '',
-            });
+            this.props.history.push('/recipes/list')
         });
     }
 
