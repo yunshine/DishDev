@@ -77,7 +77,7 @@ class RecipesList extends Component {
                     <div className={classes.RecipesListCard}>
                         <img src={recipe.images} className={classes.RecipesListCardImage} />
                         <h3 className={classes.RecipesListCardName}>{recipe.name}</h3>
-                        <h2 className={classes.RecipesListCardDescription}>{recipe.description}</h2>
+                        <h2 className={classes.RecipesListCardDescription}>{recipe.description.substring(0, Math.min(recipe.description.length, 85))}...</h2>
                         <p>{recipe.ingredients}</p>
                         <p>{recipe.directions}</p>
                         <DeleteRecipe id={recipe._id} name={recipe.name} className={classes.IndexDeleteRecipeButton} />

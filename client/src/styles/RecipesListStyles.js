@@ -72,7 +72,7 @@ export default {
         fontSize: '32px',
     },
     RecipesListCardDescription: {
-        fontSize: '18px',
+        fontSize: '16px',
         fontWeight: '300;'
     },
     IndexDeleteRecipeButton: {
