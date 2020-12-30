@@ -68,6 +68,9 @@ export default {
             width: '100%',
         },
     },
+    RecipesListCardText: {
+        padding: '8px 16px',
+    },
     RecipesListCardName: {
         fontSize: '32px',
     },
