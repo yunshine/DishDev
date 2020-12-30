@@ -79,13 +79,7 @@ class RecipesCreate extends Component {
 
         await api.createRecipe(payload).then(res => {
             window.alert(`Recipe successfully created!`);
-            this.setState({
-                name: '',
-                images: '',
-                description: '',
-                ingredients: '',
-                directions: '',
-            });
+            this.props.history.push('/recipes/list');
         });
     }
 
