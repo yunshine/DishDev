@@ -2,7 +2,7 @@ import sizes from './MediaSizes';
 
 export default {
     RecipesList: {
-        width: '1140px',
+        width: '1440px',
         margin: 'auto',
         marginTop: '16px',
         display: 'flex',
@@ -11,6 +11,9 @@ export default {
         alignItems: 'center',
         border: '1px solid teal',
 
+        [sizes.down('xl')]: {
+            width: '1100px',
+        },
         [sizes.down('lg')]: {
             width: '960px',
         },
@@ -24,13 +27,50 @@ export default {
             width: '100%',
         },
     },
+
     RecipesListCard: {
         border: '1px solid blue',
-        width: '400px',
+        width: '440px',
+        height: '560px',
         margin: '16px 16px',
+        [sizes.down('lg')]: {
+            width: '400px',
+        },
+        [sizes.down('md')]: {
+            width: '320px',
+        },
+        [sizes.down('sm')]: {
+            width: '480px',
+        },
+        [sizes.down('xs')]: {
+            width: '100%',
+        },
     },
-    image: {
-        width: '400px',
+
+    RecipesListCardImage: {
+        width: '440px',
+        [sizes.down('lg')]: {
+            width: '400px',
+        },
+        [sizes.down('lg')]: {
+            width: '400px',
+        },
+        [sizes.down('md')]: {
+            width: '320px',
+        },
+        [sizes.down('sm')]: {
+            width: '480px',
+        },
+        [sizes.down('xs')]: {
+            width: '100%',
+        },
+    },
+    RecipesListCardName: {
+        fontSize: '32px',
+    },
+    RecipesListCardDescription: {
+        fontSize: '18px',
+        fontWeight: '300;'
     },
     IndexDeleteRecipeButton: {
         color: 'red',

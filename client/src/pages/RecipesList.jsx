@@ -75,16 +75,14 @@ class RecipesList extends Component {
                 <hr /> */}
                 {recipes.map(recipe => (
                     <div className={classes.RecipesListCard}>
-                        <img src={recipe.images} className={this.props.classes.image} />
-                        <h3>{recipe.name}</h3>
-                        <p>{recipe.description}</p>
+                        <img src={recipe.images} className={classes.RecipesListCardImage} />
+                        <h3 className={classes.RecipesListCardName}>{recipe.name}</h3>
+                        <h2 className={classes.RecipesListCardDescription}>{recipe.description}</h2>
                         <p>{recipe.ingredients}</p>
                         <p>{recipe.directions}</p>
                         <DeleteRecipe id={recipe._id} name={recipe.name} className={classes.IndexDeleteRecipeButton} />
                         <br></br>
                         <UpdateRecipe id={recipe._id} className={this.props.classes.IndexUpdateRecipeButton} />
-                        <br></br>
-                        <hr></hr>
                     </div>
                 ))};
             </div>
