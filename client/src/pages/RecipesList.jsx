@@ -87,7 +87,7 @@ class RecipesList extends Component {
                             <UpdateRecipe id={recipe._id} className={this.props.classes.IndexUpdateRecipeButton} />
                         </div>
                     </div>
-                ))};
+                ))}
             </div>
         );
     };

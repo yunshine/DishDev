@@ -29,7 +29,6 @@ export default {
     },
 
     RecipesListCard: {
-        border: '1px solid blue',
         width: '440px',
         height: '560px',
         margin: '16px 16px',
@@ -69,10 +68,12 @@ export default {
         },
     },
     RecipesListCardText: {
+        border: '1px solid blue',
         padding: '8px 16px',
     },
     RecipesListCardName: {
         fontSize: '32px',
+        letterSpacing: '3px',
     },
     RecipesListCardDescription: {
         fontSize: '16px',
