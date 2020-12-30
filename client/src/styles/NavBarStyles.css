@@ -1,0 +1,10 @@
+.navbar {
+    background-color: rgba(255,64,80, 1);
+}
+
+.navbar a {
+    color: white;
+}
+.navbar a:hover {
+    color: #fffa59;
+}
