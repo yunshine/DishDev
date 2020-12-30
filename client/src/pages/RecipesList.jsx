@@ -86,7 +86,7 @@ class RecipesList extends Component {
                 {recipes.map(recipe => (
                     <>
                         <h3>{recipe.name}</h3>
-                        <p>{recipe.images}</p>
+                        <img src={recipe.images} className={this.props.classes.image} />
                         <p>{recipe.ingredients}</p>
                         <p>{recipe.directions}</p>
                         <DeleteRecipe id={recipe._id} />
