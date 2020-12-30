@@ -1,18 +1,7 @@
 import React, { Component } from 'react';
 import api from '../api';
-import styled from 'styled-components';
 import { withStyles } from '@material-ui/styles';
 import styles from '../styles/RecipesListStyles';
-
-const Update = styled.div`
-    color: #ef9b0f;
-    cursor: pointer;
-`
-
-const Delete = styled.div`
-    color: #ff0000;
-    cursor: pointer;
-`
 
 class UpdateRecipe extends Component {
     updateRecipe = event => {
@@ -21,7 +10,8 @@ class UpdateRecipe extends Component {
     };
 
     render() {
-        return <Update onClick={this.updateRecipe}>Update Recipe</Update>
+        // return <Update onClick={this.updateRecipe}>Update Recipe</Update>
+        return <a className={this.props.className} onClick={this.updateRecipe}>Update This Recipe</a>
     };
 };
 
@@ -39,13 +29,13 @@ class DeleteRecipe extends Component {
     };
 
     render() {
-        return <Delete onClick={this.deleteRecipe}>Delete</Delete>
+        return <a className={this.props.className} onClick={this.deleteRecipe}>Delete This Recipe</a>
     };
 };
 
 class RecipesList extends Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             recipes: [],
             columns: [],
@@ -89,8 +79,9 @@ class RecipesList extends Component {
                         <img src={recipe.images} className={this.props.classes.image} />
                         <p>{recipe.ingredients}</p>
                         <p>{recipe.directions}</p>
-                        <DeleteRecipe id={recipe._id} />
-                        <UpdateRecipe id={recipe._id} />
+                        <DeleteRecipe id={recipe._id} name={recipe.name} className={this.props.classes.IndexDeleteRecipeButton} />
+                        <br></br>
+                        <UpdateRecipe id={recipe._id} className={this.props.classes.IndexUpdateRecipeButton} />
                         <br></br>
                         <hr></hr>
                     </>

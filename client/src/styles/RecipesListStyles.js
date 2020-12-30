@@ -1,8 +1,14 @@
-// import sizes from './MediaSizes';
+import sizes from './MediaSizes';
 
 export default {
     image: {
         width: '320px',
+    },
+    IndexDeleteRecipeButton: {
+        color: 'red',
+    },
+    IndexUpdateRecipeButton: {
+        color: 'green',
     },
     // MainDiv: {
     //     margin: 'auto',
