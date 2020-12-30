@@ -2,8 +2,18 @@ import sizes from './MediaSizes';
 
 export default {
     RecipesList: {
-        width: '960px',
+        width: '1140px',
         margin: 'auto',
+        marginTop: '16px',
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        alignItems: 'center',
+        border: '1px solid teal',
+
+        [sizes.down('lg')]: {
+            width: '960px',
+        },
         [sizes.down('md')]: {
             width: '720px',
         },
@@ -14,8 +24,13 @@ export default {
             width: '100%',
         },
     },
+    RecipesListCard: {
+        border: '1px solid blue',
+        width: '400px',
+        margin: '16px 16px',
+    },
     image: {
-        width: '320px',
+        width: '400px',
     },
     IndexDeleteRecipeButton: {
         color: 'red',

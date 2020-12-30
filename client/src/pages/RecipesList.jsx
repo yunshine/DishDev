@@ -55,7 +55,8 @@ class RecipesList extends Component {
     };
 
     render() {
-        const { recipes, isLoading } = this.state
+        const { recipes, isLoading } = this.state;
+        const { classes } = this.props;
         console.log('TCL: RecipesList -> render -> recipes', recipes)
         console.log("Loading? ", this.state.isLoading)
 
@@ -67,26 +68,25 @@ class RecipesList extends Component {
         };
 
         return (
-            <div className={this.props.classes.RecipesList}>
-                <br />
-                <h3>In this page you'll see the list of recipes</h3>
+            <div className={classes.RecipesList}>
+                {/* <h3>In this page you'll see the list of recipes</h3>
                 {testText}
                 <br />
-                <hr />
+                <hr /> */}
                 {recipes.map(recipe => (
-                    <>
-                        <h3>{recipe.name}</h3>
+                    <div className={classes.RecipesListCard}>
                         <img src={recipe.images} className={this.props.classes.image} />
+                        <h3>{recipe.name}</h3>
                         <p>{recipe.description}</p>
                         <p>{recipe.ingredients}</p>
                         <p>{recipe.directions}</p>
-                        <DeleteRecipe id={recipe._id} name={recipe.name} className={this.props.classes.IndexDeleteRecipeButton} />
+                        <DeleteRecipe id={recipe._id} name={recipe.name} className={classes.IndexDeleteRecipeButton} />
                         <br></br>
                         <UpdateRecipe id={recipe._id} className={this.props.classes.IndexUpdateRecipeButton} />
                         <br></br>
                         <hr></hr>
-                    </>
-                ))}
+                    </div>
+                ))};
             </div>
         );
     };
