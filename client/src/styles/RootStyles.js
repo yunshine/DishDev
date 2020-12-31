@@ -10,6 +10,22 @@ export default {
     },
     RootText: {
         width: '1440px',
+        margin: 'auto',
+        border: '5px solid yellow',
+        '& h1': {
+            margin: '0',
+            color: 'white',
+            textShadow: '1px 1px 3px rgba(0, 0, 0, 0.2)',
+            fontSize: '32px',
+            fontWeight: 'bold',
+        },
+        '& p': {
+            fontSize: '20px',
+            color: 'white',
+            opacity: '.85',
+            textShadow: '1px 1px 3px rgba(0, 0, 0, 0.2)',
+        },
+
         [sizes.down('xl')]: {
             width: '1100px',
         },
@@ -24,6 +40,7 @@ export default {
         },
         [sizes.down('xs')]: {
             width: '100%',
+            padding: '0 16px',
         },
     }
 }
