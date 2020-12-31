@@ -12,12 +12,12 @@ class Footer extends Component {
                     <p>© 2021 Yun Chung. All rights reserved.</p>
                 </div>
                 <div className={classes.FooterRight}>
-                    <Link className='' href='mailto:yun.chung@mac.com'>
+                    <a className='' href={'mailto:yun.chung@mac.com'}>
                         <i class='far fa-envelope'> Email Me</i>
-                    </Link>
-                    <Link className='' href='https://www.linkedin.com/in/yunchungdev/'>
+                    </a>
+                    <a className='' href='https://www.linkedin.com/in/yunchungdev/' target="_blank">
                         <i class='fab fa-linkedin'> LinkedIn</i>
-                    </Link>
+                    </a>
                 </div>
             </div>
         );

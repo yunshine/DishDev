@@ -16,6 +16,9 @@ export default {
         zIndex: '2',
         '& a': {
             color: 'white',
+        },
+        '& p': {
+            marginBottom: '0',
         }
     },
 }
