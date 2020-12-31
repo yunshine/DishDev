@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import { NavBar } from '../components';
+import { NavBar, Footer } from '../components';
 import { RecipesList, RecipesCreate, RecipesUpdate } from '../pages';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -19,6 +19,7 @@ function App() {
                     component={RecipesUpdate}
                 />
             </Switch>
+            <Footer />
         </Router>
     );
 };
