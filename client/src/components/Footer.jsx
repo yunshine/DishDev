@@ -8,7 +8,17 @@ class Footer extends Component {
         const { classes } = this.props;
         return (
             <div className={classes.Footer}>
-                <h3>hi footer connection test...</h3>
+                <div className={classes.FooterLeft}>
+                    <p>© 2021 Yun Chung. All rights reserved.</p>
+                </div>
+                <div className={classes.FooterRight}>
+                    <Link className='' href='mailto:yun.chung@mac.com'>
+                        <i class='far fa-envelope'> Email Me</i>
+                    </Link>
+                    <Link className='' href='https://www.linkedin.com/in/yunchungdev/'>
+                        <i class='fab fa-linkedin'> LinkedIn</i>
+                    </Link>
+                </div>
             </div>
         );
     };
