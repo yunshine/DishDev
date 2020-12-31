@@ -7,7 +7,7 @@ class Footer extends Component {
     render() {
         const { classes } = this.props;
         return (
-            <div className={classes.FooterDiv}>
+            <div className={classes.Footer}>
                 <h3>hi footer connection test...</h3>
             </div>
         );
