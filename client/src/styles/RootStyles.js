@@ -11,7 +11,6 @@ export default {
     RootText: {
         width: '1440px',
         margin: 'auto',
-        border: '5px solid yellow',
         '& h1': {
             margin: '0',
             color: 'white',
@@ -24,6 +23,19 @@ export default {
             color: 'white',
             opacity: '.85',
             textShadow: '1px 1px 3px rgba(0, 0, 0, 0.2)',
+            marginBottom: '40px',
+        },
+        '& a': {
+            textDecoration: 'none',
+            backgroundColor: 'rgba(255, 64, 80, 1)',
+            borderRadius: '4px',
+            color: 'white',
+            padding: '8px 16px',
+            transition: '.2s all ease-in-out',
+        },
+        '& a:hover': {
+            backgroundColor: '#b31b27',
+            boxShadow: '0px 0px 8px 0px rgba(0, 0, 0, .2)',
         },
 
         [sizes.down('xl')]: {
