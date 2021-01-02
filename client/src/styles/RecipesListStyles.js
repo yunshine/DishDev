@@ -4,14 +4,14 @@ export default {
     RecipesList: {
         width: '1440px',
         margin: 'auto',
-        marginTop: '16px',
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'center',
         alignItems: 'center',
         border: '1px solid teal',
         position: 'relative',
-        minHeight: '100vh',
+        minHeight: 'calc(100vh - 96px)',
+        // marginTop: '16px',
         // height: 'calc(100% - 48px)',
         // paddingBottom: '80px',
 
