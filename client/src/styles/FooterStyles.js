@@ -19,7 +19,17 @@ export default {
         },
         '& p': {
             marginBottom: '0',
-        }
+        },
+        [sizes.down('xs')]: {
+            padding: '0 8px',
+            fontSize: '11px',
+        },
+    },
+
+    FooterRight: {
+        '& a': {
+            margin: '0 8px',
+        },
     },
 }
 
