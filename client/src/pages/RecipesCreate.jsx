@@ -3,16 +3,17 @@ import api from '../api'
 
 import styled from 'styled-components'
 
-const Title = styled.h1.attrs({
-    className: 'h1',
-})``
-
 const Wrapper = styled.div.attrs({
     className: 'form-group',
 })`
-    margin: 0 32px;
-    min-Height: calc(100vh - 96px);
+margin: 0 32px;
+margin-Top: 16px;
+min-Height: calc(100vh - 112px);
 `
+
+const Title = styled.h1.attrs({
+    className: 'h1',
+})``
 
 const Label = styled.label`
     margin: 5px;
