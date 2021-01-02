@@ -10,7 +10,8 @@ const Title = styled.h1.attrs({
 const Wrapper = styled.div.attrs({
     className: 'form-group',
 })`
-    margin: 0 30px;
+    margin: 0 32px;
+    min-Height: calc(100vh - 96px);
 `
 
 const Label = styled.label`
