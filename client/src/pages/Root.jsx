@@ -13,15 +13,15 @@ class Root extends Component {
     render() {
         const { classes } = this.props;
         return (
-            <div className={classes.Root}>
-                {/* <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/deyqjsowe/image/upload/v1609385709/Instant%20Pot%20Recipes/InstantPotBanner_gz2qqs.jpg);"> */}
+            // <div className={classes.RootPage}>
+            <div className={classes.RootJumbotron}>
                 <div className={classes.RootText}>
                     <h1>Instant Pot Recipes</h1>
                     <p>Share your <strong>best</strong> Instant Pot recipes!</p>
-                    {/* <a class="btn btn-flat" href="#">Apply now</a> */}
                     <Link to="/recipes/list" className={classes.RootBannerButton}>See All Recipe</Link>
                 </div>
             </div>
+            // </div>
         );
     };
 };

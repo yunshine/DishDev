@@ -10,6 +10,10 @@ export default {
         justifyContent: 'center',
         alignItems: 'center',
         border: '1px solid teal',
+        position: 'relative',
+        minHeight: '100vh',
+        // height: 'calc(100% - 48px)',
+        // paddingBottom: '80px',
 
         [sizes.down('xl')]: {
             width: '1100px',

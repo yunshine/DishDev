@@ -9,9 +9,9 @@ export default {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginTop: '48px',
-        position: 'absolute',
-        bottom: '0',
+        // marginBottom: '-48px',
+        // position: 'absolute',
+        // bottom: '0',
         padding: '0 40px',
         zIndex: '2',
         '& a': {
