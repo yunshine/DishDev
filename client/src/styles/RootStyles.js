@@ -9,7 +9,7 @@ export default {
         backgroundImage: 'linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/deyqjsowe/image/upload/v1609385709/Instant%20Pot%20Recipes/InstantPotBanner_gz2qqs.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        padding: '250px 0',
+        padding: 'calc(32vh) 0',
         minHeight: 'calc(100vh - 96px)',
     },
     RootText: {
