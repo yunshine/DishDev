@@ -8,7 +8,7 @@ class NavBar extends Component {
         return (
             <div>
                 <nav class="navbar navbar-expand-sm">
-                    <Link to="/" class="navbar-brand">Home</Link>
+                    <Link to="/" class="navbar-brand" id="HomeLink">Home</Link>
                     <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>

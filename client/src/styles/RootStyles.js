@@ -27,18 +27,19 @@ export default {
             color: 'white',
             opacity: '.85',
             textShadow: '1px 1px 3px rgba(0, 0, 0, 0.2)',
-            marginBottom: '40px',
+            marginBottom: '36px',
         },
         '& a': {
             textDecoration: 'none',
             backgroundColor: 'rgba(255, 64, 80, 1)',
             borderRadius: '4px',
             color: 'white',
-            padding: '8px 16px',
-            transition: '.2s all ease-in-out',
+            padding: '12px 32px',
+            transition: '.1s all ease-in-out',
         },
         '& a:hover': {
             backgroundColor: '#b31b27',
+            color: '#fffa59',
             boxShadow: '0px 0px 8px 0px rgba(0, 0, 0, .2)',
         },
 

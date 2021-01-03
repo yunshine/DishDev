@@ -18,7 +18,7 @@ class Root extends Component {
                 <div className={classes.RootText}>
                     <h1>Instant Pot Recipes</h1>
                     <p>Share your <strong>best</strong> Instant Pot recipes!</p>
-                    <Link to="/recipes/list" className={classes.RootBannerButton}>See All Recipe</Link>
+                    <Link to="/recipes/list" className={classes.RootBannerButton}>See All Recipes</Link>
                 </div>
             </div>
             // </div>

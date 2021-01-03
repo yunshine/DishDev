@@ -14,11 +14,7 @@ function App() {
                 <Route path="/" exact component={Root} />
                 <Route path="/recipes/list" exact component={RecipesList} />
                 <Route path="/recipes/create" exact component={RecipesCreate} />
-                <Route
-                    path="/recipes/update/:id"
-                    exact
-                    component={RecipesUpdate}
-                />
+                <Route path="/recipes/update/:id" exact component={RecipesUpdate} />
             </Switch>
             <Footer />
         </Router>
