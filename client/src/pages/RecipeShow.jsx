@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import api from '../api';
 import { withStyles } from '@material-ui/styles';
-import styles from '../styles/RecipesShowStyles';
+import styles from '../styles/RecipeShowStyles';
 
-class RecipesShow extends Component {
+class RecipeShow extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -30,11 +30,14 @@ class RecipesShow extends Component {
 
 
         return (
-            <div className={classes.RecipesShow}>
-                <h1>hi from show page...</h1>
-                <img src={images} alt="" />
-                <h1>{name}</h1>
-                <p>{description}</p>
+            <div className={classes.RecipeShow}>
+                <div className={classes.RecipeShowTop}>
+                    <img src={images} className={classes.RecipeShowCardImage} alt="" />
+                    <div className={classes.RecipeShowTopRight}>
+                        <h1>{name}</h1>
+                        <p>{description}</p>
+                    </div>
+                </div>
                 <p>{ingredients}</p>
                 <p>{directions}</p>
 
@@ -43,4 +46,4 @@ class RecipesShow extends Component {
     };
 };
 
-export default withStyles(styles)(RecipesShow);
+export default withStyles(styles)(RecipeShow);
