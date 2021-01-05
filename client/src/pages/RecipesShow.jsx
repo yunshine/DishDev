@@ -26,12 +26,17 @@ class RecipesShow extends Component {
 
     render() {
         const { classes } = this.props;
+        const { name, images, description, ingredients, directions } = this.state.recipe;
 
 
         return (
             <div className={classes.RecipesShow}>
                 <h1>hi from show page...</h1>
-                <h1>{this.state.recipe.name} name here...;</h1>
+                <img src={images} alt="" />
+                <h1>{name}</h1>
+                <p>{description}</p>
+                <p>{ingredients}</p>
+                <p>{directions}</p>
 
             </div>
         );
