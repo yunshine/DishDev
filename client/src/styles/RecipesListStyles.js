@@ -4,6 +4,7 @@ export default {
     RecipesList: {
         width: '1440px',
         margin: 'auto',
+        padding: '8px 0',
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'center',
@@ -34,8 +35,8 @@ export default {
 
     RecipesListCard: {
         width: '440px',
-        height: '560px',
-        margin: '16px 16px',
+        // height: '560px',
+        margin: '8px 16px 8px 16px',
         [sizes.down('lg')]: {
             width: '400px',
         },
