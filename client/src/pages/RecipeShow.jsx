@@ -38,9 +38,17 @@ class RecipeShow extends Component {
                         <p>{description}</p>
                     </div>
                 </div>
-                <p>{ingredients}</p>
-                <p>{directions}</p>
 
+                <div className={classes.RecipeShowBottom}>
+                    <div className={classes.RecipeShowBottomLeft}>
+                        <h3>Ingredients</h3>
+                        <p>{ingredients}</p>
+                    </div>
+                    <div className={classes.RecipeShowBottomRight}>
+                        <h3>Directions</h3>
+                        <p>{directions}</p>
+                    </div>
+                </div>
             </div>
         );
     };

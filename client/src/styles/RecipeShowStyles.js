@@ -35,12 +35,6 @@ export default {
         display: 'flex',
         alignItems: 'center',
         justifyContents: 'center',
-
-    },
-    RecipeShowTopRight: {
-        textAlign: 'center',
-        padding: '16px',
-
     },
     RecipeShowCardImage: {
         width: '540px',
@@ -62,5 +56,27 @@ export default {
         [sizes.down('xs')]: {
             width: '100%',
         },
+    },
+    RecipeShowTopRight: {
+        textAlign: 'center',
+        padding: '16px',
+    },
+    RecipeShowBottom: {
+        marginTop: '16px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContents: 'center',
+        '& h3': {
+            textAlign: 'center',
+
+        },
+    },
+    RecipeShowBottomLeft: {
+        border: '2px solid yellow',
+        width: '40%',
+    },
+    RecipeShowBottomRight: {
+        border: '2px solid blue',
+        width: '60%',
     },
 }
