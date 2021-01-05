@@ -124,7 +124,7 @@ class RecipesUpdate extends Component {
                     value={description}
                     onChange={this.handleChangeInputDescription}
                 />
-                <Label>Ingredients: </Label>
+                <Label>Ingredients (please include a comma and a space between ingredients): </Label>
                 <InputText
                     type="text"
                     value={ingredients}
