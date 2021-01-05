@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import api from '../api';
 import { withStyles } from '@material-ui/styles';
 import styles from '../styles/RecipesListStyles';
@@ -84,10 +85,12 @@ class RecipesList extends Component {
 
                             <br />
                             <DeleteRecipe id={recipe._id} name={recipe.name} className={classes.IndexDeleteRecipeButton} /><span> | </span>
-                            <UpdateRecipe id={recipe._id} className={this.props.classes.IndexUpdateRecipeButton} />
+                            <UpdateRecipe id={recipe._id} className={this.props.classes.IndexUpdateRecipeButton} /><span> | </span>
+                            <Link to={recipe._id} className={classes.IndexShowRecipeButton}>See This Recipe</Link>
                         </div>
                     </div>
-                ))}
+                ))
+                }
             </div>
         );
     };

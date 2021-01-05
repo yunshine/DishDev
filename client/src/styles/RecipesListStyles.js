@@ -89,6 +89,9 @@ export default {
     IndexUpdateRecipeButton: {
         color: 'green',
     },
+    IndexShowRecipeButton: {
+        color: 'turquoise',
+    },
     // MainDiv: {
     //     margin: 'auto',
     //     marginTop: '56px',
