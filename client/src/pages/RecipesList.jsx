@@ -44,7 +44,7 @@ class RecipesList extends Component {
     }
 
     componentDidMount = async () => {
-        this.setState({ isLoading: true })
+        this.setState({ isLoading: true });
 
         await api.getAllRecipes().then(recipes => {
             this.setState({
