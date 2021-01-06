@@ -28,10 +28,12 @@ export default {
             width: '720px',
         },
         [sizes.down('sm')]: {
-            width: '540px',
+            width: '100%',
+            padding: '24px',
         },
         [sizes.down('xs')]: {
             width: '100%',
+            padding: '24px',
         },
     },
     RecipeShowTop: {
@@ -62,6 +64,9 @@ export default {
             [sizes.down('md')]: {
                 fontSize: '44px',
             },
+            [sizes.down('sm')]: {
+                fontSize: '32px',
+            },
         },
         '& p': {
             fontSize: '16',
@@ -70,6 +75,9 @@ export default {
             // color: 'rgba(255,64,80,.85)',
             // color: '#ff4050',
             // color: '#2483b3',
+            [sizes.down('sm')]: {
+                color: 'rgba(0,0,0,.65)',
+            },
         },
     },
     RecipeShowTopRight: {
@@ -96,7 +104,7 @@ export default {
             width: '320px',
         },
         [sizes.down('sm')]: {
-            width: '480px',
+            width: '280px',
         },
         [sizes.down('xs')]: {
             width: '100%',
@@ -113,6 +121,9 @@ export default {
             letterSpacing: '3px',
             marginBottom: '16px',
             fontWeight: '300',
+            [sizes.down('sm')]: {
+                fontSize: '28px',
+            },
         },
     },
     RecipeShowBottomLeft: {
