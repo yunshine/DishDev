@@ -9,7 +9,7 @@ class RecipeShow extends Component {
         this.state = {
             isLoading: false,
             id: this.props.match.params.id,
-            recipe: {},
+            recipe: { ingredients: '' },
         }
     }
 
@@ -22,11 +22,14 @@ class RecipeShow extends Component {
                 isLoading: false,
             })
         })
+        // this.setState()
     };
 
     render() {
         const { classes } = this.props;
         const { name, images, description, ingredients, directions } = this.state.recipe;
+
+        const newIngredients = ingredients.split(", ");
 
 
         return (
@@ -46,6 +49,16 @@ class RecipeShow extends Component {
                     <div className={classes.RecipeShowBottomLeft}>
                         <h3>Ingredients</h3>
                         <p>{ingredients}</p>
+                        <p>{newIngredients}</p>
+
+
+
+                        {/* <ul>
+                            {newIngredients.map(ingredient => {
+                                <li>ingredient</li>
+                            })}
+                        </ul> */}
+
                     </div>
                     <div className={classes.RecipeShowBottomRight}>
                         <h3>Directions</h3>

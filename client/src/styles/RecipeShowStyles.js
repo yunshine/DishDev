@@ -86,6 +86,7 @@ export default {
         paddingLeft: '24px',
         paddingRight: '16px',
         width: '588px',
+        textAlign: 'center',
     },
     RecipeShowBottomRight: {
         border: '2px solid blue',
