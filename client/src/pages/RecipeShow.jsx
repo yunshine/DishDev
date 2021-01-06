@@ -36,20 +36,26 @@ class RecipeShow extends Component {
             <div className={classes.RecipeShow}>
                 <div className={classes.RecipeShowTop}>
                     <div className={classes.RecipeShowTopLeft}>
-                        <img src={images} className={classes.RecipeShowCardImage} alt="" />
-                    </div>
-
-                    <div className={classes.RecipeShowTopRight}>
                         <h1>{name}</h1>
                         <p>{description}</p>
                     </div>
+
+                    <div className={classes.RecipeShowTopRight}>
+                        <img src={images} className={classes.RecipeShowCardImage} alt="" />
+                    </div>
                 </div>
+
+                <hr></hr>
+
 
                 <div className={classes.RecipeShowBottom}>
                     <div className={classes.RecipeShowBottomLeft}>
-                        <h3>Ingredients</h3>
-                        <p>{ingredients}</p>
-                        <p>{newIngredients}</p>
+                        <h2>Ingredients</h2>
+                        <ul>
+                            {ingredients.split(', ').map(ingredient => (
+                                <li>{ingredient}</li>
+                            ))}
+                        </ul>
 
 
 
@@ -61,7 +67,7 @@ class RecipeShow extends Component {
 
                     </div>
                     <div className={classes.RecipeShowBottomRight}>
-                        <h3>Directions</h3>
+                        <h2>Directions</h2>
                         <p>{directions}</p>
                     </div>
                 </div>
