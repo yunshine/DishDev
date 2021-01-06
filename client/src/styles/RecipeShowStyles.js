@@ -49,10 +49,19 @@ export default {
         // flexDirection: 'column',
         // justifyContent: 'space-between',
         // alignItems: 'center',
+        [sizes.down('md')]: {
+            margin: '12px',
+        },
         '& h1': {
             fontSize: '64px',
             letterSpacing: '6px',
             fontWeight: '100',
+            [sizes.down('lg')]: {
+                fontSize: '48px',
+            },
+            [sizes.down('md')]: {
+                fontSize: '44px',
+            },
         },
         '& p': {
             fontSize: '16',
@@ -67,6 +76,9 @@ export default {
         margin: '16px',
         // border: '2px solid blue',
         // padding: '24px 24px 24px 0px',
+        [sizes.down('md')]: {
+            margin: '12px',
+        },
     },
     RecipeShowCardImage: {
         width: '540px',
@@ -121,6 +133,6 @@ export default {
     RecipeShowBottomRight: {
         // border: '2px solid blue',
         width: '852px',
-        // padding: '0 32px',
+        padding: '0 16px',
     },
 }
