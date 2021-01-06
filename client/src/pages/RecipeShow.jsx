@@ -32,7 +32,10 @@ class RecipeShow extends Component {
         return (
             <div className={classes.RecipeShow}>
                 <div className={classes.RecipeShowTop}>
-                    <img src={images} className={classes.RecipeShowCardImage} alt="" />
+                    <div className={classes.RecipeShowTopLeft}>
+                        <img src={images} className={classes.RecipeShowCardImage} alt="" />
+                    </div>
+
                     <div className={classes.RecipeShowTopRight}>
                         <h1>{name}</h1>
                         <p>{description}</p>

@@ -34,7 +34,11 @@ export default {
     RecipeShowTop: {
         display: 'flex',
         alignItems: 'center',
-        justifyContents: 'center',
+        justifyContent: 'center',
+    },
+    RecipeShowTopLeft: {
+        border: '2px solid blue',
+        padding: '24px 24px',
     },
     RecipeShowCardImage: {
         width: '540px',
@@ -57,15 +61,21 @@ export default {
             width: '100%',
         },
     },
+
     RecipeShowTopRight: {
+        border: '2px solid yellow',
         textAlign: 'center',
         padding: '16px',
+        // display: 'flex',
+        // flexDirection: 'column',
+        // justifyContent: 'space-between',
+        // alignItems: 'center',
     },
     RecipeShowBottom: {
         marginTop: '16px',
         display: 'flex',
-        alignItems: 'center',
-        justifyContents: 'center',
+        alignItems: 'start',
+        justifyContent: 'center',
         '& h3': {
             textAlign: 'center',
 
@@ -73,10 +83,13 @@ export default {
     },
     RecipeShowBottomLeft: {
         border: '2px solid yellow',
-        width: '40%',
+        paddingLeft: '24px',
+        paddingRight: '16px',
+        width: '588px',
     },
     RecipeShowBottomRight: {
         border: '2px solid blue',
-        width: '60%',
+        width: '852px',
+        padding: '0 24px',
     },
 }
