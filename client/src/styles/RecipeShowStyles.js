@@ -130,9 +130,7 @@ export default {
             letterSpacing: '3px',
             marginBottom: '16px',
             fontWeight: '300',
-            [sizes.down('sm')]: {
-                fontSize: '22px',
-            },
+
         },
     },
     RecipeShowBottomLeft: {
@@ -140,9 +138,10 @@ export default {
         // paddingLeft: '24px',
         // paddingRight: '24px',
         width: '588px',
-        textAlign: 'center',
         [sizes.down('sm')]: {
             width: '33%',
+            margin: 'auto',
+            textAlign: 'center',
         },
         '& ul': {
             padding: '0',
@@ -163,6 +162,14 @@ export default {
         padding: '0 16px',
         [sizes.down('sm')]: {
             width: '66%',
+            margin: 'auto',
+            textAlign: 'center',
+        },
+    },
+    RecipeShowBottomHR: {
+        display: 'none',
+        [sizes.down('sm')]: {
+            display: 'block',
         },
     },
 }

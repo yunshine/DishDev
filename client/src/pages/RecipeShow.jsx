@@ -56,16 +56,10 @@ class RecipeShow extends Component {
                                 <li>{ingredient}</li>
                             ))}
                         </ul>
-
-
-
-                        {/* <ul>
-                            {newIngredients.map(ingredient => {
-                                <li>ingredient</li>
-                            })}
-                        </ul> */}
-
                     </div>
+
+                    <hr className={classes.RecipeShowBottomHR}></hr>
+
                     <div className={classes.RecipeShowBottomRight}>
                         <h2>Directions</h2>
                         <p>{directions}</p>
