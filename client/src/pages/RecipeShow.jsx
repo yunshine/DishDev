@@ -29,6 +29,7 @@ class RecipeShow extends Component {
     render() {
         const { classes } = this.props;
         const { name, images, description, ingredients, directions } = this.state.recipe;
+        const linkToUpdate = `update/${this.state.recipe._id}`;
 
         const newIngredients = ingredients.split(", ");
 
@@ -39,7 +40,7 @@ class RecipeShow extends Component {
                     <div className={classes.RecipeShowTopLeft}>
                         <h1>{name}</h1>
                         <p>{description}</p>
-                        <Link to="/" className={classes.ShowPageUpdateButton}>Update Recipe</Link>
+                        <Link to={linkToUpdate} className={classes.ShowPageUpdateButton}>Update Recipe</Link>
                         <Link to="/" className={classes.ShowPageDeleteButton}>Delete Recipe</Link>
                     </div>
 
