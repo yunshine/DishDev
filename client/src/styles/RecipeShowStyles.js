@@ -145,7 +145,7 @@ export default {
         width: '588px',
         textAlign: 'center',
         [sizes.down('sm')]: {
-            width: '33%',
+            width: '100%',
             margin: 'auto',
             // textAlign: 'center',
         },
@@ -167,9 +167,10 @@ export default {
         width: '852px',
         padding: '0 16px',
         [sizes.down('sm')]: {
-            width: '66%',
+            width: '100%',
             margin: 'auto',
             textAlign: 'center',
+            padding: '0 8px',
         },
     },
     RecipeShowBottomHR: {
