@@ -73,6 +73,9 @@ export default {
             [sizes.down('sm')]: {
                 fontSize: '48px',
             },
+            [sizes.down('iPhone')]: {
+                fontSize: '40px',
+            },
         },
         '& p': {
             fontSize: '16',
@@ -136,6 +139,9 @@ export default {
             [sizes.down('sm')]: {
                 textAlign: 'center',
             },
+            [sizes.down('iPhone')]: {
+                fontSize: '28px',
+            },
         },
     },
     RecipeShowBottomLeft: {
@@ -159,6 +165,10 @@ export default {
             lineHeight: '185%',
             [sizes.down('sm')]: {
                 fontSize: '17px',
+            },
+            [sizes.down('iPhone')]: {
+                fontSize: '16px',
+                lineHeight: '175%',
             },
         },
     },
