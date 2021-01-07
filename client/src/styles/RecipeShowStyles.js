@@ -60,6 +60,7 @@ export default {
         },
         [sizes.down('sm')]: {
             margin: '0px',
+            marginBottom: '20px',
         },
         '& h1': {
             fontSize: '64px',
@@ -89,18 +90,6 @@ export default {
                 color: 'rgba(0,0,0,.65)',
             },
         },
-        // '& a': {
-        //     color: 'white',
-        //     transition: '.1s all ease-in-out',
-        //     margin: '0 8px',
-        //     borderRadius: '4px',
-        //     padding: '8px 8px',
-        // },
-        // '& a:hover': {
-        //     color: '#fffa59',
-        //     textDecoration: 'none',
-        //     boxShadow: '0px 0px 8px 1px rgba(0,0,0, .2)',
-        // },
     },
     ShowPageUpdateButton: {
         backgroundColor: '#26b5ff',
@@ -115,6 +104,9 @@ export default {
             textDecoration: 'none',
             boxShadow: '0px 0px 8px 1px rgba(0,0,0, .2)',
         },
+        [sizes.down('sm')]: {
+            marginBottom: '16px',
+        },
     },
     ShowPageDeleteButton: {
         backgroundColor: '#ff4050',
@@ -128,6 +120,9 @@ export default {
             color: '#fffa59',
             textDecoration: 'none',
             boxShadow: '0px 0px 8px 1px rgba(0,0,0, .2)',
+        },
+        [sizes.down('sm')]: {
+            marginBottom: '16px',
         },
     },
     RecipeShowTopRight: {
