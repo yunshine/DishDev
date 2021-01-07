@@ -93,6 +93,10 @@ export default {
         [sizes.down('md')]: {
             margin: '12px',
         },
+        [sizes.down('sm')]: {
+            width: '100%',
+            margin: 'auto',
+        },
     },
     RecipeShowCardImage: {
         width: '540px',
@@ -103,14 +107,13 @@ export default {
         [sizes.down('lg')]: {
             width: '400px',
         },
-        [sizes.down('lg')]: {
-            width: '400px',
-        },
         [sizes.down('md')]: {
             width: '320px',
         },
         [sizes.down('sm')]: {
-            width: '280px',
+            width: '400px',
+            display: 'block',
+            margin: 'auto',
         },
         [sizes.down('xs')]: {
             width: '100%',
@@ -130,7 +133,9 @@ export default {
             letterSpacing: '3px',
             marginBottom: '16px',
             fontWeight: '300',
-
+            [sizes.down('sm')]: {
+                textAlign: 'center',
+            },
         },
     },
     RecipeShowBottomLeft: {
@@ -138,10 +143,11 @@ export default {
         // paddingLeft: '24px',
         // paddingRight: '24px',
         width: '588px',
+        textAlign: 'center',
         [sizes.down('sm')]: {
             width: '33%',
             margin: 'auto',
-            textAlign: 'center',
+            // textAlign: 'center',
         },
         '& ul': {
             padding: '0',
