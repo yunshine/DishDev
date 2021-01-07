@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import api from '../api';
 import { withStyles } from '@material-ui/styles';
 import styles from '../styles/RecipeShowStyles';
@@ -38,6 +39,8 @@ class RecipeShow extends Component {
                     <div className={classes.RecipeShowTopLeft}>
                         <h1>{name}</h1>
                         <p>{description}</p>
+                        <Link to="/" className={classes.ShowPageUpdateButton}>Update Recipe</Link>
+                        <Link to="/" className={classes.ShowPageDeleteButton}>Delete Recipe</Link>
                     </div>
 
                     <div className={classes.RecipeShowTopRight}>
