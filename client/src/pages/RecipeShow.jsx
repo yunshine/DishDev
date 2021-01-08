@@ -4,13 +4,30 @@ import api from '../api';
 import { withStyles } from '@material-ui/styles';
 import styles from '../styles/RecipeShowStyles';
 
+class DeleteRecipe extends Component {
+    deleteRecipe = event => {
+        event.preventDefault();
+        if (
+            window.confirm(
+                `Are you sure you want to delete ${this.props.name}?`,
+            )
+        ) {
+            api.deleteRecipeById(this.props.id);
+            window.location.href = '/recipes/list';
+        }
+    };
+    render() {
+        return <a className={this.props.className} onClick={this.deleteRecipe}>Delete Recipe</a>
+    };
+};
+
 class RecipeShow extends Component {
     constructor(props) {
         super(props);
         this.state = {
             isLoading: false,
             id: this.props.match.params.id,
-            recipe: { ingredients: '' },
+            recipe: { ingredients: '', },
         }
     }
 
@@ -41,7 +58,7 @@ class RecipeShow extends Component {
                         <h1>{name}</h1>
                         <p>{description}</p>
                         <Link to={linkToUpdate} className={classes.ShowPageUpdateButton}>Update Recipe</Link>
-                        <Link to="/" className={classes.ShowPageDeleteButton}>Delete Recipe</Link>
+                        <DeleteRecipe id={this.state.id} name={name} className={classes.ShowPageDeleteButton} />
                     </div>
 
                     <div className={classes.RecipeShowTopRight}>
