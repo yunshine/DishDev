@@ -72,9 +72,7 @@ class RecipesList extends Component {
             <div>
                 <div className={classes.RecipesListBanner}>
                     <div className={classes.RecipesListText}>
-                        <h1>Instant Pot Recipes</h1>
-                        <p>Share your <strong>best</strong> Instant Pot recipes!</p>
-                        <Link to="/recipes/list" className={classes.RecipesListBannerButton}>See All Recipes</Link>
+                        <h1 className={classes.RecipesListBannerH1}>Instant Pot Recipes</h1>
                     </div>
                 </div>
 
@@ -87,8 +85,8 @@ class RecipesList extends Component {
                         <div className={classes.RecipesListCard}>
                             <img src={recipe.images} className={classes.RecipesListCardImage} />
                             <div className={classes.RecipesListCardText}>
-                                <h3 className={classes.RecipesListCardName}>{recipe.name}</h3>
-                                <h2 className={classes.RecipesListCardDescription}>{recipe.description.substring(0, Math.min(recipe.description.length, 85))}...</h2>
+                                <h2 className={classes.RecipesListCardName}>{recipe.name}</h2>
+                                <h4 className={classes.RecipesListCardDescription}>{recipe.description.substring(0, Math.min(recipe.description.length, 85))}...</h4>
                                 {/* <p>{recipe.ingredients}</p> */}
                                 {/* <p>{recipe.directions}</p> */}
 

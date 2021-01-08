@@ -5,11 +5,16 @@ export default {
         backgroundImage: 'linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/deyqjsowe/image/upload/v1609385709/Instant%20Pot%20Recipes/InstantPotBanner_gz2qqs.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        padding: '96px',
+        padding: '80px',
     },
     RecipesListText: {
-        margin: 'auto',
         textAlign: 'center',
+        color: 'white',
+        letterSpacing: '10px',
+    },
+    RecipesListBannerH1: {
+        fontSize: '48px',
+        textShadow: '0px 0px 12px black',
     },
     RecipesList: {
         width: '1440px',
@@ -19,7 +24,6 @@ export default {
         flexWrap: 'wrap',
         justifyContent: 'center',
         alignItems: 'center',
-        border: '1px solid teal',
         position: 'relative',
         minHeight: 'calc(100vh - 96px)',
         // marginTop: '16px',
@@ -47,6 +51,7 @@ export default {
         width: '440px',
         // height: '560px',
         margin: '8px 16px 8px 16px',
+        boxShadow: '0px 0px 10px 3px rgba(0, 0, 0, .16)',
         [sizes.down('lg')]: {
             width: '400px',
         },
@@ -83,7 +88,6 @@ export default {
         },
     },
     RecipesListCardText: {
-        border: '1px solid blue',
         padding: '8px 16px',
     },
     RecipesListCardName: {
