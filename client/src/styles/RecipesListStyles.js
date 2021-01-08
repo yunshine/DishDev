@@ -23,7 +23,7 @@ export default {
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'start',
         position: 'relative',
         minHeight: 'calc(100vh - 96px)',
         // marginTop: '16px',
@@ -48,8 +48,9 @@ export default {
     },
 
     RecipesListCard: {
+        position: 'relative',
         width: '440px',
-        // height: '560px',
+        height: '480px',
         margin: '8px 16px 8px 16px',
         boxShadow: '0px 0px 10px 3px rgba(0, 0, 0, .16)',
         [sizes.down('lg')]: {
@@ -104,8 +105,29 @@ export default {
     IndexUpdateRecipeButton: {
         color: 'green',
     },
+    RecipeListCardButtonDiv: {
+        width: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
     IndexShowRecipeButton: {
-        color: 'turquoise',
+        position: 'absolute',
+        bottom: '0',
+        marginBottom: '8px',
+        backgroundColor: '#ff4050',
+        color: 'white',
+        transition: '.1s all ease-in-out',
+        margin: '0',
+        marginBottom: '16px',
+        borderRadius: '4px',
+        padding: '6px 24px',
+        '&:hover': {
+            backgroundColor: '#b31b27',
+            color: '#fffa59',
+            textDecoration: 'none',
+            boxShadow: '0px 0px 8px 1px rgba(0,0,0, .2)',
+        },
     },
     // MainDiv: {
     //     margin: 'auto',
