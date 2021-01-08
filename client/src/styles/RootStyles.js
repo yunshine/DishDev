@@ -2,8 +2,6 @@ import sizes from './MediaSizes';
 
 export default {
     RootPage: {
-        // position: 'relative',
-        // paddingBottom: '48px',
     },
     RootJumbotron: {
         backgroundImage: 'linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/deyqjsowe/image/upload/v1609385709/Instant%20Pot%20Recipes/InstantPotBanner_gz2qqs.jpg)',
@@ -61,26 +59,3 @@ export default {
         },
     }
 }
-
-    // style="backgroundImage: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/deyqjsowe/image/upload/v1609385709/Instant%20Pot%20Recipes/InstantPotBanner_gz2qqs.jpg);"
-
-//     .banner {
-//     background - size: cover;
-//     background - position: center;
-//     padding: 150px 0;
-// }
-
-//   .banner h1 {
-//     margin: 0;
-//     color: white;
-//     text - shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-//     font - size: 32px;
-//     font - weight: bold;
-// }
-
-//   .banner p {
-//     font - size: 20px;
-//     color: white;
-//     opacity: .7;
-//     text - shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-// }

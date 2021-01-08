@@ -3,18 +3,10 @@ import sizes from './MediaSizes';
 
 export default {
     RecipeShow: {
-        // border: '5px solid red',
         width: '1440px',
         margin: 'auto',
-        // display: 'flex',
-        // flexWrap: 'wrap',
-        // justifyContent: 'center',
-        // alignItems: 'center',
-        // position: 'relative',
         minHeight: 'calc(100vh - 96px)',
-        // marginTop: '16px',
-        // height: 'calc(100% - 48px)',
-        // paddingBottom: '80px',
+
         fontFamily: 'Helvetica, Arial, sans-serif',
         '& hr': {
             borderTop: '1px solid rgba(255,64,80,.39)',
@@ -47,15 +39,9 @@ export default {
         },
     },
     RecipeShowTopLeft: {
-        // border: '2px solid yellow',
         textAlign: 'center',
         width: '588px',
         margin: '16px',
-        // padding: '0 16px',
-        // display: 'flex',
-        // flexDirection: 'column',
-        // justifyContent: 'space-between',
-        // alignItems: 'center',
         [sizes.down('md')]: {
             margin: 'auto',
             padding: '0 16px',
@@ -185,15 +171,11 @@ export default {
         },
     },
     RecipeShowBottomLeft: {
-        // border: '2px solid yellow',
-        // paddingLeft: '24px',
-        // paddingRight: '24px',
         width: '588px',
         textAlign: 'center',
         [sizes.down('sm')]: {
             width: '100%',
             margin: 'auto',
-            // textAlign: 'center',
         },
         '& ul': {
             padding: '0',
@@ -213,7 +195,6 @@ export default {
         },
     },
     RecipeShowBottomRight: {
-        // border: '2px solid blue',
         width: '852px',
         padding: '0 16px',
         [sizes.down('sm')]: {

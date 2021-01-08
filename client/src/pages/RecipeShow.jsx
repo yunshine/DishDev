@@ -40,7 +40,6 @@ class RecipeShow extends Component {
                 isLoading: false,
             })
         })
-        // this.setState()
     };
 
     render() {
