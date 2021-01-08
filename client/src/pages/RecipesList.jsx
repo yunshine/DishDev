@@ -69,28 +69,38 @@ class RecipesList extends Component {
         };
 
         return (
-            <div className={classes.RecipesList}>
-                {/* <h3>In this page you'll see the list of recipes</h3>
+            <div>
+                <div className={classes.RecipesListBanner}>
+                    <div className={classes.RecipesListText}>
+                        <h1>Instant Pot Recipes</h1>
+                        <p>Share your <strong>best</strong> Instant Pot recipes!</p>
+                        <Link to="/recipes/list" className={classes.RecipesListBannerButton}>See All Recipes</Link>
+                    </div>
+                </div>
+
+                <div className={classes.RecipesList}>
+                    {/* <h3>In this page you'll see the list of recipes</h3>
                 {testText}
                 <br />
                 <hr /> */}
-                {recipes.map(recipe => (
-                    <div className={classes.RecipesListCard}>
-                        <img src={recipe.images} className={classes.RecipesListCardImage} />
-                        <div className={classes.RecipesListCardText}>
-                            <h3 className={classes.RecipesListCardName}>{recipe.name}</h3>
-                            <h2 className={classes.RecipesListCardDescription}>{recipe.description.substring(0, Math.min(recipe.description.length, 85))}...</h2>
-                            {/* <p>{recipe.ingredients}</p> */}
-                            {/* <p>{recipe.directions}</p> */}
+                    {recipes.map(recipe => (
+                        <div className={classes.RecipesListCard}>
+                            <img src={recipe.images} className={classes.RecipesListCardImage} />
+                            <div className={classes.RecipesListCardText}>
+                                <h3 className={classes.RecipesListCardName}>{recipe.name}</h3>
+                                <h2 className={classes.RecipesListCardDescription}>{recipe.description.substring(0, Math.min(recipe.description.length, 85))}...</h2>
+                                {/* <p>{recipe.ingredients}</p> */}
+                                {/* <p>{recipe.directions}</p> */}
 
-                            <br />
-                            <DeleteRecipe id={recipe._id} name={recipe.name} className={classes.IndexDeleteRecipeButton} /><span> | </span>
-                            <UpdateRecipe id={recipe._id} className={this.props.classes.IndexUpdateRecipeButton} /><span> | </span>
-                            <Link to={recipe._id} className={classes.IndexShowRecipeButton}>See This Recipe</Link>
+                                <br />
+                                <DeleteRecipe id={recipe._id} name={recipe.name} className={classes.IndexDeleteRecipeButton} /><span> | </span>
+                                <UpdateRecipe id={recipe._id} className={this.props.classes.IndexUpdateRecipeButton} /><span> | </span>
+                                <Link to={recipe._id} className={classes.IndexShowRecipeButton}>See This Recipe</Link>
+                            </div>
                         </div>
-                    </div>
-                ))
-                }
+                    ))
+                    }
+                </div>
             </div>
         );
     };
