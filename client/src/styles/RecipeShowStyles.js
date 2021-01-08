@@ -57,7 +57,9 @@ export default {
         // justifyContent: 'space-between',
         // alignItems: 'center',
         [sizes.down('md')]: {
-            margin: '12px',
+            margin: 'auto',
+            padding: '0 16px',
+            width: '100%',
         },
         [sizes.down('sm')]: {
             margin: '0px',
