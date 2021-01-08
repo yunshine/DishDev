@@ -49,6 +49,7 @@ export default {
     RecipeShowTopLeft: {
         // border: '2px solid yellow',
         textAlign: 'center',
+        width: '588px',
         margin: '16px',
         // padding: '0 16px',
         // display: 'flex',
@@ -127,6 +128,8 @@ export default {
     },
     RecipeShowTopRight: {
         margin: '16px',
+        width: '852px',
+        textAlign: 'center',
         [sizes.down('md')]: {
             margin: '12px',
         },
@@ -141,6 +144,7 @@ export default {
         objectFit: 'cover',
         padding: '0px',
         boxShadow: '0px 0px 28px 8px rgba(0, 0, 0, .25)',
+        margin: 'auto',
         [sizes.down('lg')]: {
             width: '400px',
         },
