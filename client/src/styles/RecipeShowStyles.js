@@ -26,7 +26,7 @@ export default {
         },
         [sizes.down('xs')]: {
             width: '100%',
-            padding: '24px',
+            padding: '16px',
         },
     },
     RecipeShowTop: {

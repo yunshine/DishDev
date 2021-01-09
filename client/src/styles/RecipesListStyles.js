@@ -6,19 +6,28 @@ export default {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '240px',
-        width: '100vw',
+        width: '100%',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        [sizes.down('sm')]: {
+            height: '200px',
+        },
     },
     RecipesListText: {
         textAlign: 'center',
         color: 'white',
         letterSpacing: '12px',
+        [sizes.down('sm')]: {
+            letterSpacing: '8px',
+        },
     },
     RecipesListBannerH1: {
         fontSize: '48px',
         textShadow: '0px 0px 12px black',
+        [sizes.down('sm')]: {
+            fontSize: '32px',
+        },
     },
     RecipesList: {
         width: '1440px',
@@ -40,7 +49,8 @@ export default {
             width: '720px',
         },
         [sizes.down('sm')]: {
-            width: '540px',
+            width: '100%',
+            minHeight: 'calc(100vh - 296px)',
         },
         [sizes.down('xs')]: {
             width: '100%',

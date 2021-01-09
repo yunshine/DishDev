@@ -57,15 +57,8 @@ class RecipesList extends Component {
     render() {
         const { recipes, isLoading } = this.state;
         const { classes } = this.props;
-        console.log('TCL: RecipesList -> render -> recipes', recipes)
-        console.log("Loading? ", this.state.isLoading)
-
-        // let testText = <p>testText...</p>;
-        // if (recipes.length) {
-        //     testText = <h4>Great! Some recipes exist...</h4>;
-        // } else {
-        //     testText = <h4>!!!Oh NO!!! ERROR!!! There are no recipes!!!</h4>;
-        // };
+        console.log('TCL: RecipesList -> render -> recipes', recipes);
+        console.log("Loading? ", this.state.isLoading);
 
         return (
             <div>
