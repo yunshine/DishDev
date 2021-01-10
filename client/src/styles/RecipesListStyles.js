@@ -10,8 +10,12 @@ export default {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        padding: '0',
+        [sizes.down('md')]: {
+            height: '180px',
+        },
         [sizes.down('sm')]: {
-            height: '200px',
+            height: '160px',
         },
         [sizes.down('xs')]: {
             height: '160px',
@@ -21,12 +25,13 @@ export default {
         textAlign: 'center',
         color: 'white',
         letterSpacing: '12px',
+        padding: '0',
         [sizes.down('md')]: {
             letterSpacing: '8px',
             width: '100%',
         },
         [sizes.down('sm')]: {
-            letterSpacing: '8px',
+            letterSpacing: '6px',
         },
         [sizes.down('xs')]: {
             letterSpacing: '4px',
@@ -36,15 +41,16 @@ export default {
     RecipesListBannerH1: {
         fontSize: '48px',
         textShadow: '0px 0px 12px black',
+        padding: '0',
         [sizes.down('md')]: {
             padding: '0',
-            fontSize: '28px',
+            fontSize: '40px',
         },
         [sizes.down('sm')]: {
-            fontSize: '28px',
+            fontSize: '24px',
         },
         [sizes.down('xs')]: {
-            fontSize: '26px',
+            fontSize: '20px',
         },
     },
     RecipesList: {
