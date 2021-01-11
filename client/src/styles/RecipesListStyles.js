@@ -47,10 +47,15 @@ export default {
             fontSize: '40px',
         },
         [sizes.down('sm')]: {
-            fontSize: '24px',
+            fontSize: '40px',
+            margin: '0',
+            padding: '0',
+            '& span': {
+                display: 'none',
+            },
         },
         [sizes.down('xs')]: {
-            fontSize: '20px',
+            fontSize: '36px',
         },
     },
     RecipesList: {
