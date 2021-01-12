@@ -30,7 +30,7 @@
         "react-scripts": "4.0.0",
         "react-table": "^7.6.1",
         "styled-components": "^5.2.1",
-        "web-vitals": "^0.2.4",
+        "web-vitals": "^0.2.4"
     },
     "homepage": "https://github.com/yunshine/Instant-Pot-Recipes#readme",
     "scripts": {
@@ -57,5 +57,5 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
-    }
+    },
 }
