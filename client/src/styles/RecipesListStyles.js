@@ -16,6 +16,8 @@ export default {
         },
         [sizes.down('sm')]: {
             height: '160px',
+            padding: '0',
+            margin: '0',
         },
         [sizes.down('xs')]: {
             height: '160px',
@@ -37,6 +39,9 @@ export default {
             letterSpacing: '4px',
             padding: '0',
         },
+        [sizes.down('iPhone')]: {
+            letterSpacing: '8px',
+        },
     },
     RecipesListBannerH1: {
         fontSize: '48px',
@@ -50,12 +55,15 @@ export default {
             fontSize: '40px',
             margin: '0',
             padding: '0',
-            '& span': {
-                display: 'none',
-            },
         },
         [sizes.down('xs')]: {
             fontSize: '36px',
+        },
+        [sizes.down('iPhone')]: {
+            fontSize: '40px',
+            '& span': {
+                display: 'none',
+            },
         },
     },
     RecipesList: {
