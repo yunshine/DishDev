@@ -34,7 +34,6 @@
     },
     "homepage": "https://github.com/yunshine/Instant-Pot-Recipes#readme",
     "scripts": {
-        // "start": "PORT=8080 react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
