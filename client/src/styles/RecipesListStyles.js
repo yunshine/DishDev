@@ -22,6 +22,9 @@ export default {
         [sizes.down('xs')]: {
             height: '160px',
         },
+        [sizes.down('iPhone')]: {
+            height: '120px',
+        },
     },
     RecipesListText: {
         textAlign: 'center',
@@ -60,7 +63,7 @@ export default {
             fontSize: '36px',
         },
         [sizes.down('iPhone')]: {
-            fontSize: '40px',
+            fontSize: '32px',
             '& span': {
                 display: 'none',
             },
