@@ -2,7 +2,7 @@
     "name": "instant-pot-recipes",
     "version": "1.0.0",
     "description": "",
-    "main": "client/public/index.html",
+    "main": "index.js",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/yunshine/Instant-Pot-Recipes.git"
@@ -40,7 +40,8 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "start": "node server/index.js"
+        "start": "node index.js",
+        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build"
     },
     "eslintConfig": {
         "extends": [
