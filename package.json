@@ -2,7 +2,7 @@
     "name": "instant-pot-recipes",
     "version": "1.0.0",
     "description": "",
-    "main": "index.html",
+    "main": "client/public/index.html",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/yunshine/Instant-Pot-Recipes.git"
