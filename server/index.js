@@ -5,6 +5,11 @@ const cors = require('cors');
 const db = require('./db');
 const recipesRouter = require('./routes/recipes-router');
 
+if (process.env.NODE_ENV !== "production") {
+    require('dotenv').config();
+    console.log(`Development Environment .env file: process.env.key`);
+};
+
 const app = express();
 const apiPort = process.env.PORT || 3000;
 

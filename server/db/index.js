@@ -1,11 +1,13 @@
 const mongoose = require('mongoose');
-const developmentDB = 'mongodb://127.0.0.1:27017/instant_pot_recipes';
+
+if (process.env.NODE_ENV !== "production") {
+    require('dotenv').config();
+    console.log(`DB using Development Environment`);
+};
 const dbUrl = process.env.DB_URL;
 
-// mongoose.connect(developmentDB, {
-// mongoose.connect(dbUrl, {
-mongoose.connect('mongodb+srv://yunshine:ilJC8239@cluster0.zow7p.mongodb.net/<dbname>?retryWrites=true&w=majority', {
-    // mongoose.connect('mongodb://127.0.0.1:27017/instant_pot_recipes', {
+// mongoose.connect('mongodb://127.0.0.1:27017/instant_pot_recipes', {
+mongoose.connect(dbUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
