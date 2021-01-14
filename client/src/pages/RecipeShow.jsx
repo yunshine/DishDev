@@ -83,11 +83,10 @@ class RecipeShow extends Component {
                     <div className={classes.RecipeShowBottomRight}>
                         <h2>Directions</h2>
                         <ol>
-                            {directions.split(', ').map(step => (
-                                <li>{step}</li>
+                            {directions.split('. ').map(step => (
+                                <li>{step}.</li>
                             ))}
                         </ol>
-                        <p>{directions}</p>
                     </div>
                 </div>
             </div>

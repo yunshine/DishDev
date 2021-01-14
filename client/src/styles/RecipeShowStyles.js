@@ -203,6 +203,23 @@ export default {
             textAlign: 'center',
             padding: '0 8px',
         },
+        '& ul': {
+            padding: '0',
+        },
+        '& li': {
+            // listStyleType: 'none',
+            fontSize: '18px',
+            fontWeight: '300',
+            lineHeight: '175%',
+            marginBottom: '8px',
+            [sizes.down('sm')]: {
+                // fontSize: '17px',
+            },
+            [sizes.down('iPhone')]: {
+                // fontSize: '16px',
+                // lineHeight: '175%',
+            },
+        },
     },
     RecipeShowBottomHR: {
         display: 'none',
