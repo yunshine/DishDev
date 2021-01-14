@@ -6,6 +6,7 @@ if (process.env.NODE_ENV !== "production") {
 };
 const dbUrl = process.env.DATABASEURL || process.env.DB_URL;
 
+// local database: __________________________________________________________________________
 // mongoose.connect('mongodb://127.0.0.1:27017/instant_pot_recipes', {
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
