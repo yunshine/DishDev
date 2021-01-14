@@ -27,7 +27,7 @@ class RecipeShow extends Component {
         this.state = {
             isLoading: false,
             id: this.props.match.params.id,
-            recipe: { ingredients: '', },
+            recipe: { ingredients: '', directions: '', },
         }
     }
 
@@ -82,6 +82,11 @@ class RecipeShow extends Component {
 
                     <div className={classes.RecipeShowBottomRight}>
                         <h2>Directions</h2>
+                        <ol>
+                            {directions.split(', ').map(step => (
+                                <li>{step}</li>
+                            ))}
+                        </ol>
                         <p>{directions}</p>
                     </div>
                 </div>

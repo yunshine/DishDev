@@ -75,7 +75,7 @@ class RecipesList extends Component {
                             <div className={classes.RecipesListCardText}>
                                 {/* <h2 className={classes.RecipesListCardName}>{recipe.name}</h2> */}
 
-                                <h2 className={classes.RecipesListCardName}>{recipe.name.length <= 12 ? recipe.name : recipe.name.substring(0, Math.min(recipe.name.length, 12)) + "..."}</h2>
+                                <h2 className={classes.RecipesListCardName}>{recipe.name.length <= 20 ? recipe.name : recipe.name.substring(0, Math.min(recipe.name.length, 20)) + "..."}</h2>
 
                                 <h4 className={classes.RecipesListCardDescription}>
                                     {recipe.description.length <= 85 ? recipe.description : recipe.description.substring(0, Math.min(recipe.description.length, 85)) + "..."}

@@ -130,7 +130,7 @@ class RecipesUpdate extends Component {
                     value={ingredients}
                     onChange={this.handleChangeInputIngredients}
                 />
-                <Label>Directions: </Label>
+                <Label>Directions (please include a comma and a space between each step): </Label>
                 <InputText
                     type="text"
                     value={directions}
