@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 db.on('error', console.error.bind(console, 'MongoDB connection error.'));
 
 app.get('/', (req, res) => {
-    res.send('Instant Pot Recipes connected...')
+    res.send('Instant Pot Recipes server connected and listening on Heroku...')
 });
 
 app.use('/api', recipesRouter);

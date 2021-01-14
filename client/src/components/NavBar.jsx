@@ -19,7 +19,7 @@ class NavBar extends Component {
                                 <Link to="/recipes/list" class="nav-link">See All Recipes</Link>
                             </li>
                             <li class="nav-item">
-                                <Link to="/recipes/create" class="nav-link">Create a New Recipe</Link>
+                                <Link to="/recipes/create" class="nav-link">Add a New Recipe</Link>
                             </li>
 
                             {/* <li class="nav-item dropdown">
