@@ -7,7 +7,8 @@ const recipesRouter = require('./routes/recipes-router');
 
 if (process.env.NODE_ENV !== "production") {
     require('dotenv').config();
-    console.log(`Development Environment .env file: process.env.key`);
+    let currentEnviroment = process.env.NODE_ENV || "development";
+    console.log(`Current Server Environment: ${currentEnviroment}`);
 };
 
 const app = express();
