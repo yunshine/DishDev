@@ -64,7 +64,7 @@ class RecipesList extends Component {
             <div>
                 <div className={classes.RecipesListBanner}>
                     <div className={classes.RecipesListText}>
-                        <h1 className={classes.RecipesListBannerH1}><span>Instant Pot </span>Recipes</h1>
+                        <h1 className={classes.RecipesListBannerH1}><span>DishDev </span>Recipes</h1>
                     </div>
                 </div>
 

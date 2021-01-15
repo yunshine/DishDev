@@ -16,7 +16,7 @@ class Root extends Component {
             // <div className={classes.RootPage}>
             <div className={classes.RootJumbotron}>
                 <div className={classes.RootText}>
-                    <h1>Instant Pot Recipes</h1>
+                    <h1>DishDev</h1>
                     <p>Share your <strong>best</strong> Instant Pot recipes!</p>
                     <Link to="/recipes/list" className={classes.RootBannerButton}>See All Recipes</Link>
                 </div>
