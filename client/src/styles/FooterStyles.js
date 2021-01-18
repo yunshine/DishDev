@@ -1,6 +1,6 @@
 import sizes from './MediaSizes';
 
-export default {
+const footerStyles = {
     Footer: {
         width: '100%',
         height: '48px',
@@ -33,4 +33,6 @@ export default {
             margin: '0 8px',
         },
     },
-}
+};
+
+export default footerStyles;

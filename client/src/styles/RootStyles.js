@@ -1,6 +1,6 @@
 import sizes from './MediaSizes';
 
-export default {
+const rootStyles = {
     RootPage: {
     },
     RootJumbotron: {
@@ -58,4 +58,6 @@ export default {
             padding: '0 16px',
         },
     }
-}
+};
+
+export default rootStyles;

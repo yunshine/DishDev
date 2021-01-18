@@ -1,6 +1,6 @@
 import sizes from './MediaSizes';
 
-export default {
+const recipesListStyles = {
     RecipesListBanner: {
         backgroundImage: 'linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/deyqjsowe/image/upload/v1609385709/Instant%20Pot%20Recipes/InstantPotBanner_gz2qqs.jpg)',
         backgroundSize: 'cover',
@@ -164,7 +164,6 @@ export default {
     IndexShowRecipeButton: {
         position: 'absolute',
         bottom: '0',
-        marginBottom: '8px',
         backgroundColor: '#ff4050',
         color: 'white',
         transition: '.1s all ease-in-out',
@@ -180,3 +179,5 @@ export default {
         },
     },
 };
+
+export default recipesListStyles;

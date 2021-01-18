@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/styles';
-import styles from '../styles/RootStyles';
+import rootStyles from '../styles/RootStyles';
 
 class Root extends Component {
     constructor(props) {
@@ -26,4 +26,4 @@ class Root extends Component {
     };
 };
 
-export default withStyles(styles)(Root);
+export default withStyles(rootStyles)(Root);

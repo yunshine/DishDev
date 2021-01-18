@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import api from '../api';
 import { withStyles } from '@material-ui/styles';
-import styles from '../styles/RecipeShowStyles';
+import recipeShowStyles from '../styles/RecipeShowStyles';
 
 class DeleteRecipe extends Component {
     deleteRecipe = event => {
@@ -46,9 +46,6 @@ class RecipeShow extends Component {
         const { classes } = this.props;
         const { name, images, description, ingredients, directions } = this.state.recipe;
         const linkToUpdate = `update/${this.state.recipe._id}`;
-
-        const newIngredients = ingredients.split(", ");
-
 
         return (
             <div className={classes.RecipeShow}>
@@ -94,4 +91,4 @@ class RecipeShow extends Component {
     };
 };
 
-export default withStyles(styles)(RecipeShow);
+export default withStyles(recipeShowStyles)(RecipeShow);

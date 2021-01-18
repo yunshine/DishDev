@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/styles';
-import styles from '../styles/FooterStyles';
+import footerStyles from '../styles/FooterStyles';
 
 class Footer extends Component {
     render() {
@@ -14,7 +14,7 @@ class Footer extends Component {
                     <a className='' href={'mailto:yun.chung@mac.com'}>
                         <i class='far fa-envelope'> Email Me</i>
                     </a>
-                    <a className='' href='https://www.linkedin.com/in/yunchungdev/' target="_blank">
+                    <a className='' href='https://www.linkedin.com/in/yunchungdev/' target="_blank" rel="noopener noreferrer">
                         <i class='fab fa-linkedin'> LinkedIn</i>
                     </a>
                 </div>
@@ -23,4 +23,4 @@ class Footer extends Component {
     };
 };
 
-export default withStyles(styles)(Footer);
+export default withStyles(footerStyles)(Footer);

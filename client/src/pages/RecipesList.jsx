@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import api from '../api';
 import { withStyles } from '@material-ui/styles';
-import styles from '../styles/RecipesListStyles';
+import recipesListStyles from '../styles/RecipesListStyles';
 
 // class UpdateRecipe extends Component {
 //     updateRecipe = event => {
@@ -15,23 +15,22 @@ import styles from '../styles/RecipesListStyles';
 //     };
 // };
 
-class DeleteRecipe extends Component {
-    deleteRecipe = event => {
-        event.preventDefault();
-        if (
-            window.confirm(
-                `Are you sure you want to delete ${this.props.name}?`,
-            )
-        ) {
-            api.deleteRecipeById(this.props.id);
-            window.location.reload();
-        }
-    };
-
-    render() {
-        return <a className={this.props.className} onClick={this.deleteRecipe}>Delete This Recipe</a>
-    };
-};
+// class DeleteRecipe extends Component {
+//     deleteRecipe = event => {
+//         event.preventDefault();
+//         if (
+//             window.confirm(
+//                 `Are you sure you want to delete ${this.props.name}?`,
+//             )
+//         ) {
+//             api.deleteRecipeById(this.props.id);
+//             window.location.reload();
+//         }
+//     };
+//     render() {
+//         return <a className={this.props.className} onClick={this.deleteRecipe}>Delete This Recipe</a>
+//     };
+// };
 
 class RecipesList extends Component {
     constructor(props) {
@@ -55,7 +54,7 @@ class RecipesList extends Component {
     };
 
     render() {
-        const { recipes, isLoading } = this.state;
+        const { recipes } = this.state;
         const { classes } = this.props;
         console.log('TCL: RecipesList -> render -> recipes', recipes);
         console.log("Loading? ", this.state.isLoading);
@@ -71,7 +70,7 @@ class RecipesList extends Component {
                 <div className={classes.RecipesList}>
                     {recipes.map(recipe => (
                         <div className={classes.RecipesListCard}>
-                            <img src={recipe.images} className={classes.RecipesListCardImage} />
+                            <img src={recipe.images} className={classes.RecipesListCardImage} alt={recipe.name} />
                             <div className={classes.RecipesListCardText}>
                                 {/* <h2 className={classes.RecipesListCardName}>{recipe.name}</h2> */}
 
@@ -95,4 +94,4 @@ class RecipesList extends Component {
     };
 };
 
-export default withStyles(styles)(RecipesList);
+export default withStyles(recipesListStyles)(RecipesList);

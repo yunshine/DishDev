@@ -1,7 +1,7 @@
-import { withTheme } from 'styled-components';
+// import { withTheme } from 'styled-components';
 import sizes from './MediaSizes';
 
-export default {
+const recipeShowStyles = {
     RecipeShow: {
         width: '1440px',
         margin: 'auto',
@@ -227,4 +227,6 @@ export default {
             display: 'block',
         },
     },
-}
+};
+
+export default recipeShowStyles;
