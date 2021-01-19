@@ -86,7 +86,7 @@ const recipesListStyles = {
             width: '960px',
         },
         [sizes.down('md')]: {
-            width: '720px',
+            width: '100%',
         },
         [sizes.down('sm')]: {
             width: '100%',
@@ -142,8 +142,20 @@ const recipesListStyles = {
         padding: '8px 16px',
     },
     RecipesListCardName: {
-        fontSize: '32px',
+        fontSize: '28px',
         letterSpacing: '3px',
+        [sizes.down('md')]: {
+            fontSize: '24px',
+            letterSpacing: '1.5px',
+        },
+        [sizes.down('sm')]: {
+            fontSize: '26px',
+            letterSpacing: '1.5px',
+        },
+        [sizes.down('iPhone')]: {
+            fontSize: '24px',
+            letterSpacing: '1.5px',
+        },
     },
     RecipesListCardDescription: {
         fontSize: '16px',

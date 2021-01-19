@@ -2,7 +2,7 @@ const mediaSizes = {
     up() { },
     down(size) {
         const sizes = {
-            iPhone: '399.98px',
+            iPhone: '449.98px',
             xs: '575.98px',
             sm: '767.98px',
             md: '991.98px',
