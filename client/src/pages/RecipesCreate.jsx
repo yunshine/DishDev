@@ -113,17 +113,21 @@ class RecipesCreate extends Component {
                 />
 
                 <Label>Ingredients (please include a comma and a space between ingredients): </Label>
-                <InputText
-                    type="text"
+                <textarea
+                    className="form-control"
                     value={ingredients}
                     onChange={this.handleChangeInputIngredients}
+                    style={{ height: 80, margin: '5px' }}
+                    rows={4}
                 />
 
                 <Label>Directions (please include a period and a space between each step): </Label>
-                <InputText
-                    type="text"
+                <textarea
+                    className="form-control"
                     value={directions}
                     onChange={this.handleChangeInputDirections}
+                    style={{ height: 120, margin: '5px' }}
+                    rows={6}
                 />
 
                 <Button onClick={this.handleIncludeRecipe}>Add Recipe</Button>

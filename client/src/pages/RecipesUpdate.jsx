@@ -20,9 +20,9 @@ const Label = styled.label`
     margin: 5px;
 `
 
-const InputText = styled.input.attrs({
+const InputText = styled.input.attrs(props => ({
     className: 'form-control',
-})`
+}))`
     margin: 5px;
 `
 
@@ -125,18 +125,32 @@ class RecipesUpdate extends Component {
                     onChange={this.handleChangeInputDescription}
                 />
                 <Label>Ingredients (please include a comma and a space between ingredients): </Label>
-                <InputText
-                    type="text"
+                {/* <InputText
+                    type="textarea"
                     value={ingredients}
                     onChange={this.handleChangeInputIngredients}
+                    rows={8}
+                /> */}
+                <textarea
+                    className="form-control"
+                    value={ingredients}
+                    onChange={this.handleChangeInputIngredients}
+                    style={{ margin: "5px" }}
+                    rows={4}
                 />
                 <Label>Directions (please include a period and a space between each step): </Label>
-                <InputText
+                {/* <InputText
                     type="text"
                     value={directions}
                     onChange={this.handleChangeInputDirections}
+                /> */}
+                <textarea
+                    className="form-control"
+                    value={directions}
+                    onChange={this.handleChangeInputDirections}
+                    style={{ margin: "5px" }}
+                    rows={6}
                 />
-
                 <Button onClick={this.handleUpdateRecipe}>Update Recipe</Button>
                 <CancelButton href={'/recipes/list'}>Cancel</CancelButton>
             </Wrapper>
