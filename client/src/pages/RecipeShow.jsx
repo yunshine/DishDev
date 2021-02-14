@@ -54,7 +54,7 @@ class RecipeShow extends Component {
                         <h1>{name}</h1>
                         <p>{description}</p>
                         <Link to={linkToUpdate} className={classes.ShowPageUpdateButton}>Update Recipe</Link>
-                        <DeleteRecipe id={this.state.id} name={name} className={classes.ShowPageDeleteButton} />
+                        {/* <DeleteRecipe id={this.state.id} name={name} className={classes.ShowPageDeleteButton} /> */}
                     </div>
 
                     <div className={classes.RecipeShowTopRight}>
