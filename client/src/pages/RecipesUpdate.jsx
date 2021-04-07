@@ -83,7 +83,7 @@ class RecipesUpdate extends Component {
 
         await api.updateRecipeById(id, payload).then(res => {
             window.alert(`Recipe successfuly updated`);
-            this.props.history.push('/recipes/list')
+            this.props.history.push(`/recipes/${id}`)
         });
     }
 
