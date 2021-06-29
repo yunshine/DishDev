@@ -12,7 +12,7 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    todos: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Recipe' }]
+    recipes: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Recipe' }]
 });
 
 UserSchema.pre('save', function (next) {
