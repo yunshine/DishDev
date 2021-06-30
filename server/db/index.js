@@ -14,7 +14,7 @@ mongoose.connect(dbUrl, {
     useCreateIndex: true,
     useFindAndModify: false,
 })
-    .then(() => console.log('Connected to database!'))
+    .then(() => console.log('Connected to the DishDev database!'))
     .catch(error => console.error('Connection error', error.message));
 
 const db = mongoose.connection;

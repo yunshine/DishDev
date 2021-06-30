@@ -1,9 +1,17 @@
 const express = require('express');
+const app = express();
+// const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const db = require('./db');
 const recipesRouter = require('./routes/recipes-router');
+const usersRouter = require('./routes/users-router');
+
+const apiPort = process.env.PORT || 3000;
+
+// app.use(cookieParser());
+app.use(express.json());
 
 if (process.env.NODE_ENV !== "production") {
     require('dotenv').config();
@@ -11,8 +19,6 @@ if (process.env.NODE_ENV !== "production") {
     console.log(`Current Server Environment: ${currentEnviroment}`);
 };
 
-const app = express();
-const apiPort = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
@@ -25,5 +31,6 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api', recipesRouter);
+app.use('/user', usersRouter);
 
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`));
