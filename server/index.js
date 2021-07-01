@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-// const cookieParser = require('cookie-parser');
+const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
@@ -10,7 +10,7 @@ const usersRouter = require('./routes/users-router');
 
 const apiPort = process.env.PORT || 3000;
 
-// app.use(cookieParser());
+app.use(cookieParser());
 app.use(express.json());
 
 if (process.env.NODE_ENV !== "production") {
