@@ -3,8 +3,8 @@ const userRouter = express.Router();
 const passport = require('passport');
 const passportConfig = require('../passport');
 const JWT = require('jsonwebtoken');
-const User = require('../models/users-router');
-const Recipe = require('../models/recipes-router');
+const User = require('../models/user-model');
+const Recipe = require('../models/recipe-model');
 const { json } = require('express');
 
 const signToken = userID => {
