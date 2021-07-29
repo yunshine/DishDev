@@ -14,7 +14,7 @@ const signToken = userID => {
     }, "mernauthsecret", { expiresIn: "1h" });
 }
 
-userRouter.post('/register', (req, res) => {
+userRouter.post('users/register', (req, res) => {
     const { username, password } = req.body;
     User.findOne({ username }, (err, user) => {
         if (err) {

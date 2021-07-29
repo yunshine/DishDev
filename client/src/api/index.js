@@ -11,12 +11,15 @@ export const getRecipeById = id => api.get(`/recipes/${id}`);
 export const updateRecipeById = (id, payload) => api.put(`/recipes/${id}`, payload);
 export const deleteRecipeById = id => api.delete(`/recipes/${id}`);
 
+export const registerUser = payload => api.post(`/users/register`, payload);
+
 const apis = {
     createRecipe,
     getAllRecipes,
     updateRecipeById,
     deleteRecipeById,
     getRecipeById,
+    registerUser
 };
 
 export default apis;
