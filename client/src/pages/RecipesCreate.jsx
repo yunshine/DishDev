@@ -6,7 +6,7 @@ import styled from 'styled-components'
 const Wrapper = styled.div.attrs({
     className: 'form-group',
 })`
-margin: 0 32px;
+margin: 0 64px;
 margin-Top: 16px;
 min-Height: calc(100vh - 112px);
 `

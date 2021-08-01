@@ -1,0 +1,4 @@
+.registrationForm {
+    margin: 16px 0px;
+    min-Height: calc(100vh - 128px);
+}
