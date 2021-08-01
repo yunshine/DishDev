@@ -46,22 +46,23 @@ const Registration = (props) => {
     return (
         <div className='container registrationForm'>
             <form onSubmit={onSubmit}>
-                <h1>Please Register</h1>
-                <label htmlFor="username" className="sr-only">Username: </label>
+                <h1 className="mt-5">Please Register</h1>
+                {/* <label htmlFor="username" className="sr-only">Username: </label> */}
+                <label htmlFor="username" className="">Username: </label>
                 <input type="text"
                     name="username"
                     value={user.username}
                     onChange={onChange}
                     className="form-control"
                     placeholder="Enter Username" />
-                <label htmlFor="password" className="sr-only">Password: </label>
+                <label htmlFor="password" className="mt-3">Password: </label>
                 <input type="password"
                     name="password"
                     value={user.password}
                     onChange={onChange}
                     className="form-control"
                     placeholder="Enter Password" />
-                <button className="btn btn-lg btn-primary btn-block"
+                <button className="btn btn-md btn-primary mt-3"
                     type="submit">Register</button>
             </form>
 
