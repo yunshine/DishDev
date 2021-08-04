@@ -1,3 +1,22 @@
+# DishDev
+A MERN Stack (MongoDB, Express, React.js, and Node.js) CRUD app that organizes Instant Pot recipes. This app was primarily built to showcase my ability to develop with React and server-side APIs.
+
+
+To Start This App for Development:
+
+1) Start mongodb:
+brew services start mongodb-community
+
+2) Start server from server folder:
+node index.js
+
+3) Start React from client folder:
+npm run start
+
+The server will run locally on localhost:3000.
+The client will run locally on localhost:8080.
+
+
 To deploy server to Heroku, run...
         git subtree push --prefix server heroku master
 
