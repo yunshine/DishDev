@@ -1,7 +1,7 @@
 import { useState, useContext } from 'react';
 import AuthService from '../services/AuthService';
 import Message from './Message';
-import { AuthContext } from '../Context/AuthContext';
+import { AuthContext } from '../context/AuthContext';
 
 const Login = (props) => {
     const [user, setUser] = useState({ username: '', password: '' });
@@ -33,7 +33,7 @@ const Login = (props) => {
     return (
         <div>
             <form onSubmit={onSubmit}>
-                <h3>Please Sign In</h3>
+                <h3>Please Log In</h3>
                 <label htmlFor="username" className="sr-only">Username: </label>
                 <input type="text"
                     name="username"
